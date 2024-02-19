@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" (click)="onToggle()">Display Details</button>
+            <p *ngIf="showParagraph">Secret Paragraph</p>
+            <ul>
+                <li *ngFor="let click of clicks;" 
+                    [ngStyle]="{ backgroundColor: click > 4 ? 'blue': 'transparent'}"
+                    [ngClass]="{ 'item-5': click > 4}">
+                    {{ click }}
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</div>
