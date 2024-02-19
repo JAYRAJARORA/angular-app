@@ -12,7 +12,10 @@ export class DisplayDetailsComponent {
   counter = 0;
   onToggle() {
     this.showParagraph = !this.showParagraph;
-    this.clicks.push(++this.counter);
+    // this.clicks.push(this.clicks.length + 1);
+    // this.clicks.push(++this.counter);
+    this.clicks.push(new Date());
+    
   }
 
 }

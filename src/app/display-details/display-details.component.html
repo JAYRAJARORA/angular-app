@@ -4,9 +4,9 @@
             <button class="btn btn-primary" (click)="onToggle()">Display Details</button>
             <p *ngIf="showParagraph">Secret Paragraph</p>
             <ul>
-                <li *ngFor="let click of clicks;" 
-                    [ngStyle]="{ backgroundColor: click > 4 ? 'blue': 'transparent'}"
-                    [ngClass]="{ 'item-5': click > 4}">
+                <li *ngFor="let click of clicks; let i = index" 
+                    [ngStyle]="{ backgroundColor: i >= 4 ? 'blue': 'transparent'}"
+                    [ngClass]="{ 'item-5': i >= 4}">
                     {{ click }}
                 </li>
             </ul>
